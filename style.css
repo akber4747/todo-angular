@@ -1,0 +1,39 @@
+document{
+	font-family: helvetica;
+
+}
+html{
+}
+.jumbotron{
+	background-color: SpringGreen;
+}
+#header{
+	border: 1px solid black;
+	text-align: center;
+}
+#main{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 19px;
+}
+.listed-items{
+	background-color: none;
+	border: none;
+
+}
+.item_no{
+font-weight: bold;
+}
+.items{
+	margin: 20px;
+}
+.btn-remove{
+	background-color: none;
+	border: none;
+	background: none;
+	margin-top: 10px;
+}
+
+.glyphicon{
+	cursor: pointer;
+}

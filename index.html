@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular-To-Do</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>	
+<script src="main.js"></script>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="ToDoCtrl">
+	<div class="container">
+	<div class='jumbotron'>
+		<h1>What To Do Today <small>by Akber Malik</small></h1>
+	</div>
+	<div id="main">
+		<div class="items" ng-repeat="todo in todos">
+			<span class="item_no">{{$index+1}}.</span>
+			<input type="checkbox" ng-model="todo.done">
+			<input class="listed-items" type="text" ng-model="todo.text">
+			<span class='glyphicon glyphicon-arrow-down' ng-click="move($index, 'down')"> </span>
+			<span class='glyphicon glyphicon-arrow-up' href="" ng-click="move($index, 'up')"> </span>
+			<span class="glyphicon glyphicon-remove" ng-click="removeTodo($index)"></span>
+		</div>
+		<form class='form-vertical' ng-submit="addTodo()">
+			<div class="col-sm-7 form-add">
+			<input type="text" class="form-control" ng-model="todoText" placeholder="Add An Item to Your List">
+
+			<button class='btn-remove' type="submit" value="Add a new item"><span class="glyphicon glyphicon-plus" id="submit"></span></button>
+			</div>
+		</form>	
+	</div>
+
+	</div>	
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>	
+</body>
+</html>
